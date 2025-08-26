@@ -1,0 +1,37 @@
+export const TPL_LIST_REQ   = "TPL_LIST_REQ";
+export const TPL_LIST_OK    = "TPL_LIST_OK";
+export const TPL_LIST_ERR   = "TPL_LIST_ERR";
+
+export const TPL_CREATE_REQ = "TPL_CREATE_REQ";
+export const TPL_CREATE_OK  = "TPL_CREATE_OK";
+export const TPL_CREATE_ERR = "TPL_CREATE_ERR";
+
+export const TPL_UPDATE_REQ = "TPL_UPDATE_REQ";
+export const TPL_UPDATE_OK  = "TPL_UPDATE_OK";
+export const TPL_UPDATE_ERR = "TPL_UPDATE_ERR";
+
+export const TPL_DELETE_REQ = "TPL_DELETE_REQ";
+export const TPL_DELETE_OK  = "TPL_DELETE_OK";
+export const TPL_DELETE_ERR = "TPL_DELETE_ERR";
+
+export const TPL_DETAIL_REQ = "TPL_DETAIL_REQ";
+export const TPL_DETAIL_OK  = "TPL_DETAIL_OK";
+export const TPL_DETAIL_ERR = "TPL_DETAIL_ERR";
+
+export const TPL_ROWS_PAGE_REQ = "TPL_ROWS_PAGE_REQ";
+export const TPL_ROWS_PAGE_OK  = "TPL_ROWS_PAGE_OK";
+export const TPL_ROWS_PAGE_ERR = "TPL_ROWS_PAGE_ERR";
+
+export const TPL_ROW_CREATE_REQ = "TPL_ROW_CREATE_REQ";
+export const TPL_ROW_CREATE_OK  = "TPL_ROW_CREATE_OK";
+export const TPL_ROW_CREATE_ERR = "TPL_ROW_CREATE_ERR";
+
+export const TPL_ACCESS_MATRIX_REQ = "TPL_ACCESS_MATRIX_REQ";
+export const TPL_ACCESS_MATRIX_OK  = "TPL_ACCESS_MATRIX_OK";
+export const TPL_ACCESS_MATRIX_ERR = "TPL_ACCESS_MATRIX_ERR";
+
+export const TPL_ACCESS_SAVE_REQ = "TPL_ACCESS_SAVE_REQ";
+export const TPL_ACCESS_SAVE_OK  = "TPL_ACCESS_SAVE_OK";
+export const TPL_ACCESS_SAVE_ERR = "TPL_ACCESS_SAVE_ERR";
+
+export const TPL_FIELD_DETAIL_OK = "TPL_FIELD_DETAIL_OK";

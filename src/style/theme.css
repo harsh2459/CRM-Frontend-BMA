@@ -1,0 +1,129 @@
+:root {
+  /* Brand palette (from palette #1) */
+  --brand-900: #003135;
+  /* deep blue-green */
+  --brand-800: #024950;
+  /* teal-ink */
+  --brand-acc-warm: #964734;
+  /* warm accent */
+  --brand-acc-cool: #0FA4AF;
+  /* aqua accent */
+  --brand-50: #AFDDE5;
+  /* pale aqua */
+
+  /* Neutrals */
+  --bg: #F8FAFC;
+  --surface: #FFFFFF;
+  --text-900: #282828;
+  --text-700: #334155;
+  --text-500: #64748B;
+  --border: #E5E7EB;
+
+  /* Feedback */
+  --success: #16A34A;
+  --error: #EF4444;
+  --warning: #F59E0B;
+
+  /* Semantic aliases (use these in components) */
+  --primary: var(--brand-800);
+  --primary-hover: #013B40;
+  --primary-contrast: #FFFFFF;
+
+  --accent: var(--brand-acc-cool);
+  --accent-hover: #0C8B94;
+  --accent-contrast: #001014;
+
+  --muted: var(--brand-50);
+  --muted-contrast: var(--text-900);
+}
+
+/* Base layout */
+body {
+  background: var(--bg) !important;
+  color: var(--text-900) !important;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--primary-contrast);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.btn-accent:hover {
+  background: var(--accent-hover);
+}
+
+.btn-ghost {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text-900);
+}
+
+.badge {
+  background: var(--muted);
+  color: var(--muted-contrast);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.input,
+.select,
+.textarea {
+  background: #F9FAFB;
+  border: 1px solid var(--border);
+  color: var(--text-900);
+  border-radius: 10px;
+  padding: 10px 12px;
+  outline: none;
+}
+
+.header {
+  background: #F2F6F7;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar {
+  background: var(--accent);
+  color: #EAF6F8 !important;
+}
+
+.sidebar-link.active {
+  background: #055c64 !important;
+}
+
+.link {
+  color: var(--accent);
+}
+
+::selection {
+  background-color: #0fa4af !important;
+  color: #fff !important;
+}

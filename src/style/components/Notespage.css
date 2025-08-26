@@ -1,0 +1,26 @@
+/* Notes Page Container */
+.notes-page-container {
+  padding: 20px;
+}
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notes-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.notes-header button {
+  padding: 12px 20px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.app-layout {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 40px;
+  width: calc(100% - 40px);
+  padding: 20px;
+}
+
+.dark-icons {
+  font-size: 22px;
+  color: var(--text-900);
+  cursor: pointer;
+}
+
+.logo {
+  width: 38px;
+  height: 40px;
+}
+
+.Toastify__toast--success {
+  background: var(--success) !important;
+  color: #fff !important;
+}
+
+.Toastify__toast--error {
+  background: var(--error) !important;
+  color: #fff !important;
+}
+
+.Toastify__toast--warning {
+  background: var(--warning) !important;
+  color: #0B1416 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cursour {
+  cursor: pointer;
+}
+
+/* Quill editor styles */
+.ql-container {
+  background-color: #F3F4F6;
+  color: var(--text-900);
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+}
+
+.ql-toolbar {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.ql-editor {
+  min-height: 200px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.ql-container.ql-snow {
+  border-radius: 6px;
+  border: 1px solid #E5E7EB;
+}

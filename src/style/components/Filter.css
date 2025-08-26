@@ -1,0 +1,22 @@
+/* src/style/components/filter.css */
+.filter-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filter-container input,
+.filter-container select {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.filter-container .input.search {
+  width: 200px;
+}
+
+.filter-container .styled-select {
+  width: 150px;
+}

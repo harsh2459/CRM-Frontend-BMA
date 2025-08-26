@@ -1,0 +1,70 @@
+/* container */
+.cm {
+  width: 224px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Reduced shadow size */
+  padding: 6px;
+  z-index: 9999;
+}
+
+
+/* item */
+.cm-it {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.1;
+  cursor: pointer;
+}
+
+.cm-it:hover,
+.cm-it:focus {
+  background: var(--accent);
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+}
+
+.cm-sep {
+  height: 8px;
+}
+
+/* danger */
+.cm-it.danger {
+  color: #c62828;
+}
+
+.cm-it.danger:hover {
+  background: #fdecec;
+}
+
+/* submenu trigger */
+.cm-sub {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* small caret */
+.cm-caret {
+  opacity: .6;
+  font-size: 12px;
+}
+
+/* submenu panel */
+.cm-submenu {
+  position: absolute;
+  top: 0;
+  min-width: 180px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 6px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .18), 0 4px 14px rgba(0, 0, 0, .10);
+  z-index: 10000; 
+  /* transition: opacity 0.2s, transform 0.2s; */
+}

@@ -1,0 +1,253 @@
+.delegated-task-wrapper {
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-900);
+  background-color: var(--surface);
+  min-height: 100vh;
+}
+
+.delegated-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.delegated-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-900);
+}
+
+.assign-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #10B981;
+  /* green */
+  color: var(--surface);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.assign-btn img {
+  height: 24px;
+}
+
+.assign-btn:hover {
+  background-color: #059669;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-card {
+  background-color: #F3F4F6;
+  border-left: 4px solid var(--primary);
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: background 0.3s;
+}
+
+.task-card:hover {
+  background-color: #E5E7EB;
+}
+
+.task-title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.task-title .status {
+  font-size: 12px;
+  font-weight: 500;
+  color: #F59E0B;
+  /* warning color */
+}
+
+.task-meta,
+.task-due {
+  font-size: 13px;
+  color: #4B5563;
+}
+
+/* src/style/pages/DelegatedTasks.css */
+.task-list {
+  margin-top: 12px;
+}
+
+.task-header-row,
+.task-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1.2fr 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.task-header-row {
+  padding: 10px 12px;
+  color: var(--text-700);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+  background: #F7FAFB;
+  border-radius: 8px 8px 0 0;
+}
+
+.task-row {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.task-row:last-child {
+  border-bottom: none;
+  border-radius: 0 0 8px 8px;
+}
+
+.t-title {
+  font-weight: 700;
+  color: var(--text-900);
+}
+
+.t-sub {
+  font-size: 12px;
+  color: var(--text-500);
+  margin-top: 2px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: var(--muted);
+  color: var(--muted-contrast);
+  border: 1px solid var(--border);
+}
+
+.badge.low {
+  background: #ECFDF5;
+  color: #065F46;
+  border-color: #D1FAE5;
+  padding: 10px;
+}
+
+.badge.medium {
+  background: #EFF6FF;
+  color: #1E40AF;
+  border-color: #DBEAFE;
+  padding: 10px;
+}
+
+.badge.high {
+  background: #FEF3C7;
+  color: #92400E;
+  border-color: #FDE68A;
+  padding: 10px;
+}
+
+.badge.critical {
+  background: #FEF2F2;
+  color: #991B1B;
+  border-color: #FECACA;
+  padding: 10px;
+}
+
+.badge.success {
+  background: #ECFDF5;
+  color: #065F46;
+  border-color: #D1FAE5;
+}
+
+.badge.info {
+  background: #E0F2FE;
+  color: #075985;
+  border-color: #BAE6FD;
+}
+
+.badge.warn {
+  background: #FEF3C7;
+  color: #92400E;
+  border-color: #FDE68A;
+}
+
+.badge.danger {
+  background: #FEF2F2;
+  color: #991B1B;
+  border-color: #FECACA;
+}
+
+.badge.muted {
+  background: #F3F4F6;
+  color: #374151;
+  border-color: #E5E7EB;
+}
+
+.chip-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--muted);
+  color: var(--text-900);
+  padding: 5px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid var(--border);
+}
+
+.chip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #9CA3AF;
+}
+
+.chip-dot[data-status="In Progress"] {
+  background: #0FA4AF;
+}
+
+.chip-dot[data-status="Completed"] {
+  background: #16A34A;
+}
+
+.chip-dot[data-status="Blocked"] {
+  background: #F59E0B;
+}
+
+.chip-dot[data-status="Cancelled"] {
+  background: #EF4444;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.input.search {
+  width: 260px;
+  height: 38px;
+  background: #F9FAFB;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0 12px;
+}

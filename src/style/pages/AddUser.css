@@ -1,0 +1,153 @@
+.user-list {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.user-row {
+  display: grid;
+  grid-template-columns: 44px 110px 1fr 1.4fr 1fr auto;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.user-row.compact {
+  padding: 8px 12px;
+}
+
+.user-list.compact {
+  gap: 6px;
+}
+
+/* avatar */
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #1111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F3F4F6;
+  font-weight: 600;
+  color: var(--text-900);
+}
+
+/* actions */
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.col {
+  font-size: 14px;
+  color:var(--text-900);
+}
+
+.col.code {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* badges (used in details modal) */
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: #EEF2FF;
+}
+
+/* modal (reuses your assign-task style) */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-card {
+  width: 520px;
+  max-width: 92vw;
+  background: var(--surface);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+  padding: 22px;
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 20px;
+  margin: 2px 0 12px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.modal-actions .primary {
+  flex: 1;
+  height: 42px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: var(--surface);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-actions .ghost {
+  flex: 1;
+  height: 42px;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  background: #F3F4F6;
+  color: var(--text-900);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.modal-actions .danger {
+  flex: 1;
+  height: 42px;
+  border: none;
+  border-radius: 10px;
+  background: #EF4444;
+  color: var(--surface);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* details grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 14px;
+  margin-top: 6px;
+}
+
+.details-grid>div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+}
+
+.details-grid b {
+  color: #6B7280;
+  font-size: 12px;
+  font-weight: 600;
+}

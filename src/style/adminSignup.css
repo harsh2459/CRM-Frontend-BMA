@@ -1,0 +1,120 @@
+/* Container for the Signup Form */
+.admin-signup-container {
+  background-color: var(--surface);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;  /* Centers the container horizontally */
+  margin-top: 7%;  /* Move the container up by 15% */
+}
+
+/* Heading Style */
+.admin-signup-heading {
+  font-size: 26px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Adds emphasis to the title */
+}
+
+/* Form Styling */
+.admin-signup-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Input Field Styling */
+.admin-signup-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus effect for input fields */
+.admin-signup-input:focus {
+  border-color: #2575fc;  /* Highlight field on focus */
+}
+
+/* Password input wrapper with eye icon */
+.password-input-wrapper {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 35%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Signup Button Styling */
+.admin-signup-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2575fc;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+/* Hover effect for the signup button */
+.admin-signup-button:hover {
+  background-color: #6a11cb;
+}
+
+/* Link Styling for Login */
+.link-text {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.link-text a {
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-text a:hover {
+  text-decoration: underline;
+}
+
+/* Add a subtle animation effect */
+.admin-signup-container {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 600px) {
+  .admin-signup-container {
+    width: 90%;
+    margin-top: 50px;
+  }
+}
+
+.mb-10{
+  margin-bottom: 10px;
+}
