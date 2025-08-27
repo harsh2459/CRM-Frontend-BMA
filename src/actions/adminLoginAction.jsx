@@ -21,23 +21,24 @@ export const loginByRole = (email, password, role) => async (dispatch) => {
     const { data } = await axiosInstance.post(url, { email, password });
     console.log(data);
 
-    // Normalize payload from either endpoint
     const payload = {
       token: data.token,
-      role: role || data.role || 'employee',
-      userId: data.userId || data.adminId || data.employeeCode || data._id,
-      name: data.name || data.admin?.name || data.user?.name || '',
-      email: data.email || email,
+      role: data.role || role,
+      userId: data.adminId || data.user?.employeeCode && data.user?._id || data.user?._id,
+      _id: data.adminId || data.employee,
+      name: data.adminName || data.user?.name || '',
+      email: data.user?.email || data.email || email,
     };
 
-
+    console.log(payload.token);
+    
     // Persist session (unified + legacy)
     sessionStorage.setItem('token', payload.token);
     sessionStorage.setItem('role', payload.role);
     sessionStorage.setItem('userId', payload.userId);
     sessionStorage.setItem('name', payload.name);
     sessionStorage.setItem('email', payload.email);
-    sessionStorage.setItem('adminId', payload.userId); // keep old code working
+    sessionStorage.setItem('adminId', payload.userId);
 
     dispatch({ type: ADMIN_LOGIN_SUCCESS, payload });
 

@@ -32,7 +32,6 @@
     background: var(--muted, #f2f6f7);
     color: #111;
     padding: 4px 10px;
-    border-radius: 999px;
     font-size: 12px;
 }
 
@@ -147,7 +146,7 @@
 .tbl-head,
 .tr {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) 180px;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr)) 0px;
 }
 
 .th,
@@ -206,3 +205,4 @@
     justify-content: flex-end;
     margin-top: 12px;
 }
+

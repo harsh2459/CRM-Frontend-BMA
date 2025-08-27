@@ -5,7 +5,8 @@ import * as T from "../actionTypes/templateTypes";
 export const fetchTemplates = () => async dispatch => {
   dispatch({ type: T.TPL_LIST_REQ });
   try {
-    const { data } = await axiosInstance.get("/template/all"); // or /template/for-me for user
+    const { data } = await axiosInstance.get("/template/for-me"); // or /template/for-me for user
+    console.log(data);
     dispatch({ type: T.TPL_LIST_OK, payload: data.items || data.templates || [] });
   } catch (e) {
     dispatch({ type: T.TPL_LIST_ERR, error: e.response?.data?.error || e.message });
@@ -15,7 +16,7 @@ export const fetchTemplates = () => async dispatch => {
 export const createTemplate = (body) => async dispatch => {
   dispatch({ type: T.TPL_CREATE_REQ });
   try {
-    const { data } = await axiosInstance.post("/template/create-template", body);
+    const { data } = await axiosInstance.post("/template/", body);
     dispatch({ type: T.TPL_CREATE_OK, payload: data.template });
   } catch (e) {
     dispatch({ type: T.TPL_CREATE_ERR, error: e.response?.data?.message || e.message });
@@ -33,7 +34,7 @@ export const updateTemplate = (id, body) => async dispatch => {
 };
 
 export const deleteTemplate = (id) => async dispatch => {
-  dispatch({ type: T.TPL_DELETE_REQ, meta:{id} });
+  dispatch({ type: T.TPL_DELETE_REQ, meta: { id } });
   try {
     await axiosInstance.delete(`/template/${id}`);
     dispatch({ type: T.TPL_DELETE_OK, payload: id });
@@ -47,7 +48,8 @@ export const fetchTemplaterowsDetail = (id) => async (dispatch) => {
   dispatch({ type: T.TPL_DETAIL_REQ });
   try {
     const { data } = await axiosInstance.get(`/template/${id}/rows`);
-       
+    console.log(data);
+
     dispatch({ type: T.TPL_DETAIL_OK, payload: data });
   } catch (e) {
     dispatch({ type: T.TPL_DETAIL_ERR, error: e.response?.data?.message || e.message });
@@ -57,7 +59,7 @@ export const fetchTemplaterowsDetail = (id) => async (dispatch) => {
 export const fetchtemplatefield = (id) => async (dispatch) => {
   dispatch({ type: T.TPL_DETAIL_REQ });
   try {
-    const { data } = await axiosInstance.get(`/template/${id}`);       
+    const { data } = await axiosInstance.get(`/template/${id}`);
     dispatch({ type: T.TPL_FIELD_DETAIL_OK, payload: data.template });
   } catch (e) {
     dispatch({ type: T.TPL_DETAIL_ERR, error: e.response?.data?.message || e.message });
@@ -68,6 +70,7 @@ export const fetchtemplatefield = (id) => async (dispatch) => {
 export const createTemplateRow = (id, row) => async dispatch => {
   dispatch({ type: T.TPL_ROW_CREATE_REQ });
   try {
+
     const { data } = await axiosInstance.post(`/template/${id}/rows`, { data: row });
     dispatch({ type: T.TPL_ROW_CREATE_OK, payload: data.row });
   } catch (e) {
@@ -79,7 +82,7 @@ export const createTemplateRow = (id, row) => async dispatch => {
 export const fetchAccessMatrix = () => async dispatch => {
   dispatch({ type: T.TPL_ACCESS_MATRIX_REQ });
   try {
-    const { data } = await axiosInstance.get("/template/access-matrix");
+    const { data } = await axiosInstance.get("/template/admin/access-matrix");
     dispatch({ type: T.TPL_ACCESS_MATRIX_OK, payload: data });
   } catch (e) {
     dispatch({ type: T.TPL_ACCESS_MATRIX_ERR, error: e.response?.data?.error || e.message });

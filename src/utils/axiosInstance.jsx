@@ -13,6 +13,8 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use((config) => {
   const token = sessionStorage.getItem('token');
+  console.log(token);
+  
   if (token) config.headers.Authorization = token;
   if (config.data instanceof FormData) delete config.headers['Content-Type'];
   return config;
