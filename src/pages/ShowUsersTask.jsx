@@ -9,7 +9,8 @@ const ShowUsersTask = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   console.log(empId);
-
+  console.log(tasks);
+  
   const fetchTasks = async () => {
     try {
       setLoading(true);

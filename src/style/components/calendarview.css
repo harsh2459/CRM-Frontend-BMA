@@ -1,0 +1,90 @@
+/* Remove the lines between dates */
+.rbc-day-bg {
+    border: none !important;
+}
+
+/* Remove the grid lines between each day in the calendar */
+.rbc-month-view .rbc-row {
+    border-right: none !important;
+    border-bottom: none !important;
+}
+
+/* Optionally remove the top line for the header */
+
+.rbc-header {
+    border-bottom: none !important;
+    border: none !important;
+    padding: 20px !important;
+}
+
+.rbc-today {
+    background-color: #e8f0fe !important;
+    border: 1px solid #e8f0fe !important;
+    border: none !important;
+}
+
+.rbc-header button span {
+    font-size: 16px !important;
+}
+
+.rbc-timeslot-group {
+    border-bottom: none !important;
+}
+
+.rbc-time-gutter {
+    display: none !important;
+}
+
+.rbc-label {
+    display: none;
+}
+
+.rbc-allday-cell {
+    display: none;
+}
+
+.custom-green-line {
+    border: none !important;
+    background-color: transparent !important;
+}
+
+.rbc-event {
+    border: none !important;
+}
+
+.rbc-event,
+.rbc-event div {
+    overflow: visible !important;
+}
+
+.rbc-time-header {
+    margin-right: none !important;
+}
+
+.rbc-current-time-indicator {
+    display: none !important;
+}
+
+.rbc-btn-group .rbc-active {
+    background: #024950 !important;
+    color: #fff !important;
+    border: 1px solid #024950 !important;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.rbc-btn-group button {
+    background: #0FA4AF !important;
+    color: #001014 !important;
+    border: 1px solid #0FA4AF !important;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.rbc-time-content div {
+    border: none !important;
+}
