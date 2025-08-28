@@ -62,9 +62,9 @@ function App() {
               <Route path="/taskdeatil/:taskid" element={<PrivateRoute element={<TaskDetail />} />} />
               <Route path="/chat" element={<PrivateRoute element={<Chat />} />} />
               <Route path="/notes" element={<PrivateRoute element={<NotesPage />} />} />
-              <Route path="/manage-template" element={<ManageField />} />
-              <Route path="/templates" element={<Templates />} />
-              <Route path="/templates/:id" element={<TemplateDetail />} />
+              <Route path="/manage-template" element={<PrivateRoute element={<ManageField />} />} />
+              <Route path="/templates" element={<PrivateRoute element={<Templates />} />} />
+              <Route path="/templates/:id" element={<PrivateRoute element={<TemplateDetail />} />} />
             </Routes>
           </div>
         </div>
